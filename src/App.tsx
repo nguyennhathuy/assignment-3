@@ -3,6 +3,7 @@ import { Book } from "./types/Book"
 import Header from "./components/Header"
 import BodyContent from "./components/BodyContent"
 import { DUMMY_BOOK, MODAL_TYPE } from "./commons/constant"
+import "./styles/style.css"
 
 function App() {
   const [bookList, setBookList] = useState<Book[]>([])
@@ -56,8 +57,7 @@ function App() {
       return item.name.toLowerCase().includes(event.target.value)
     });
     setBookList([...searchList])
-    if (Math.ceil(searchList.length / 5) < currentPage) setCurrenPage(Math.ceil(searchList.length / 5))
-    if (Math.ceil(searchList.length / 5) === 0) setCurrenPage(1)
+    setCurrenPage(1)
   }
   function handleSwitchPage(page: number): void {
     setCurrenPage(page)
