@@ -13,6 +13,7 @@ function DataItem({ item, handleToggleModal }: Props): JSX.Element {
             <td>{item.name}</td>
             <td>{item.author}</td>
             <td>{item.topic}</td>
+            
             <td>
                 <button onClick={() => handleToggleModal(MODAL_TYPE.MODAL_DELETE, item.id)}>Delete</button>
             </td>
