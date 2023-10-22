@@ -25,6 +25,7 @@ function BodyContent({ bookList, isOpenAddmodal, isOpenDeleteModal, currentPage,
             <SearchBox 
                 handleToggleModal={handleToggleModal}
                 handleSearchBook={handleSearchBook}
+                
             />
             
                 <DataTable 
