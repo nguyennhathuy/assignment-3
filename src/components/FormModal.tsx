@@ -20,6 +20,7 @@ function FormModal({ isOpenAddmodal, handleToggleModal, handleCreateBook }: Prop
         if (!book.author || !book.name || !book.topic) {
             alert("Ensure you input a value in all fields!")
             return
+            
         }
         handleCreateBook({...book, id: idGenerator()})
         setBook(prev => ({
